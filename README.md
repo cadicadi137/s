@@ -9,7 +9,7 @@ Written on python, works on linux, tested on fedora
 <h1>How to install</h1>
 
 install "s" file from repo<br/>
-move the file into /home/user/.local/bin
+move the file into /home/user/.local/bin/ directory
 
 
 <h1>Usage: </h1>
