@@ -9,7 +9,11 @@ Written on python, works on linux, tested on fedora
 <h1>How to install</h1>
 
 install "s" file from repo<br/>
-move the file into /home/user/.local/bin/ directory
+move the file into /home/user/.local/bin/ directory<br/>
+type this command in terminal:<br/>
+```sh
+chmod +x s
+```
 
 
 <h1>Usage: </h1>
