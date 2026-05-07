@@ -22,6 +22,8 @@ ss={
 }
 
 try:
+    sys.argv[1]
+    sys.argv[2]
     query=""
     queryList = sys.argv[2:]
     query = " ".join(queryList)
