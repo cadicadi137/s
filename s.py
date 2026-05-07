@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+import argparse as ag, sys, webbrowser as wb
+
+
+#example of using: s [service] [query]
+# services: 
+# google : g
+# youtube: y
+# bing: b
+# duckduckgo: d
+# wikipedia: w
+# russian wikipedia: rw
+
+ss={
+    "g": "https://www.google.com/search?q=",
+    "y": "https://www.youtube.com/results?search_query=",
+    "b": "https://www.bing.com/search?q=",
+    "d": "https://duckduckgo.com/?q=",
+    "w": "https://en.wikipedia.org/wiki/Special:Search?search=",
+    "rw": "https://ru.wikipedia.org/w/index.php?search="
+}
+
+try:
+    query=""
+    queryList = sys.argv[2:]
+    query = " ".join(queryList)
+    wb.open(ss[sys.argv[1]]+query)
+    
+    #if len(sys.argv)>3:
+    #    for x in range(2,len(sys.argv)):
+    #        query = query + sys.argv[x] + " "
+    #        wb.open(ss[sys.argv[1]]+query)
+    #else:
+    #    sys.argv[1]
+    #    sys.argv[2]
+    #    wb.open(ss[sys.argv[1]]+sys.argv[2])
+
+except IndexError:
+    print('example of using: s [service] [query]')
+
+except KeyError:
+    print("services: ")
+    print('google : g')
+    print('youtube : y')
+    print('bing : b')
+    print('duckduckgo : d')
+    print('wikipedia: w')
+    print('russian wikipedia: rw')
+
+
+
+#parser = ag.ArgumentParser()
+#parser
+
+
+#wb.open('url')
