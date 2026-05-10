@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import sys, webbrowser as wb
+import sys, urllib.parse as urlp, webbrowser as wb
 
 
 # example of using: s [service] [query]
@@ -26,7 +26,7 @@ try:
     sys.argv[2]
     query=""
     queryList = sys.argv[2:]
-    query = " ".join(queryList)
+    query = urlp.quote(" ".join(queryList))
     wb.open(ss[sys.argv[1]]+query)
     
 except IndexError:
